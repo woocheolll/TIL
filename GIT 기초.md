@@ -35,3 +35,22 @@
     - (Github에서 설정한 username으로 설정)
   - git config —global user.email “my@email.com"
     -  Github에서 설정한 email로 설정
+
+
+
+## 원격저장소 만들기
+
+1. 경로 설정
+   - 원격 저장소 정보를 로컬 저장소에 추가
+   - 로컬 저장소에는 한번만 설정 해주면 된다.
+   - git remote add origin https://github.com/woocheolll/저장소 이름
+2. 정보 확인
+   - $ git remote -v
+3. 활용 명령어
+   - git push <원격저장소 이름> <브랜치이름>
+   - 원격 저장소로 로컬 저장소 변경 사항(커밋)을 올림(push)
+   -  로컬 폴더의 파일/폴더가 아닌 저장소의 버전(커밋)이 올라감
+     1. push 주의 사항
+        -  로컬 폴더의 파일/폴더가 아닌 저장소의 버전(커밋)이 올라감
+        - 윈도우는 아래의 화면에서 인증을 하여야 합니다. (크롬 브라우저 활용)
+
