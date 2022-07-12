@@ -135,7 +135,7 @@ else :
 
 
 
-#### while 
+#### while 문
 
 - 참인 경우 반복적으로 코드를 실행
 - 무한루프를 하지 않도록 종료조건 필요
@@ -147,4 +147,61 @@ while a < 5:
     a += 1
 print('끝')
 ```
+
+
+
+##### 실습
+
+```python
+n = 0 
+
+result = 0
+
+user_input = int(input())
+
+while n <= user_input:
+    print(f'n : {n}, result: {result}')
+    result += n
+    n += 1
+print(result)
+```
+
+
+
+#### for 문
+
+- 시퀀스를 포함한 순회가능한 객체 요소를 모두 순회함
+
+``` python
+for <변수명> in <iterable>:
+    # code block
+```
+
+
+
+- 문자열 순회
+
+``` python
+chars = input()
+ih
+for idx in range(len(chars)):
+    print(chars[idx])
+```
+
+h
+
+i
+
+
+
+#### 반복문 제어
+
+- break
+  - 반복문 종료
+- continue
+  - 이후의 코드 블록은 수행하지 않고, 다음 반복을 수행
+- for -else
+  - 끝까지 반복문을 실행한 이후에 else 문을 실행
+
+
 
