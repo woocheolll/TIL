@@ -5,8 +5,8 @@
 #numbers = [-10, -100, -30] # -10 
 
 numbers =[0,20,100,120] 
-max = 0
-max2 = 0
+max = numbers[0]
+max2 = numbers[0]
 for i in numbers:
     if i > max:
         max2 = max
