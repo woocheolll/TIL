@@ -39,7 +39,7 @@ my_instance.my_attribute
     - 두 변수가 동일한 객체를 가리키는 경우 True
 - 객체 비교하기
 
-![oop](C:\Users\ya246\Desktop\oop.PNG)
+![oop](opp.assets/oop.PNG)
 
 ### 인스턴스
 
