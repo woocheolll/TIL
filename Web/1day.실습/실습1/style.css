@@ -1,0 +1,21 @@
+/* 아래에 CSS를 작성해주세요. */
+.title{
+    text-align: center;
+}
+.subtext{
+    display:block;
+    font-size: 16px;
+}
+.item-list{
+    width: 900px;
+}
+.item {
+    width: 300px;
+    display: inline;
+}
+.item-img{
+    width: 100%;
+}
+.item-subtitle{
+    color: rgb(132, 128, 128);
+}
