@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+}
+.about{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+.banner{
+  background-image: url('../assets/apparel.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}  
+.item-img2 {
+  width: 500px;
+  margin: 0 2rem;
+}
+.img-about{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-more-all{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none
+}
+.img-more{
+  width: 64px;
+  height: 64px;
+  text-align: center;
+}
+.img2{
+  display: flex;
+  margin: 2rem 20rem;
+}
+.more-link{
+  text-align: center;
+  font-size: 12px;
+}
+.nav { 
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.nav-main {
+  text-indent: 2rem;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-link:hover {
+  color:blue;
+}
+.nav-item {
+  margin: 0 1rem;
+}
+.text-more{
+  text-align : center;
+  font-size: 2rem;
+}
+
+.text-main{
+  font-size: 2rem;
+  text-align: center;
+
+}
+.text.sub{
+  margin: 20rem 20rem;
+}
+.up{
+  position: relative;
+  left: 96%;
+  top:90%;
+  z-index:1; 
+  opacity:0.8;
+}
