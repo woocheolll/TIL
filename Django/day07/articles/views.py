@@ -49,7 +49,7 @@ def update(request,pk):
     context = {
         'article_form' : article_form
     }
-    return render(request,'articles/update.html', context)
+    return render(request,'articles/form.html', context)
 
 def delete(request, pk):
     Article.objects.get(pk=pk).delete()
