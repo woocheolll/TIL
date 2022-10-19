@@ -7,8 +7,10 @@
 {% if article.image %}
     <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
 {% endif %}<br>
+{% if request.user == article.user %}
 <a href="{% url 'articles:update' article.pk %}">수정</a>
 <a href="{% url 'articles:delete' article.pk %}">삭제</a>
+{% endif %}
 <h4 class="my-3">댓글</h4>
 {% if comments %}
 <p><b>{{ comments|length }}개의 댓글이 있습니다.</b></p>
@@ -21,11 +23,13 @@
 <hr>
 {% for comment in comments %}
 <div class="d-flex justify-content-between space-between">
-    <p>{{ user }} | {{ comment.content }}</p> <p>{{ article.updated_at|date:"y-m-d D" }}</p>
+    <p>{{ comment.user.username }} | {{ comment.content }}</p> <p>{{ article.updated_at|date:"y-m-d D" }}</p>
 </div>
+{% if request.user == article.user %}
     <a href="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
         삭제
     </a>
+{% endif %}
 
     
 

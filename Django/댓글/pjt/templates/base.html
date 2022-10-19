@@ -14,7 +14,7 @@
     <div class="d-flex justify-content-between space-between">
     <a href="{% url 'articles:index' %}">HOME</a>
     <div>
-    <span>{{ request.user }}</span>
+    <span><a href="{% url 'accounts:detail' request.user.pk %}">{{ request.user }}</a></span>
     <a href="{% url 'accounts:logout' %}">로그아웃</a>
   </div>
   </div>
