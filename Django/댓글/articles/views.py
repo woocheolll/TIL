@@ -9,10 +9,14 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    articles = Article.objects.order_by('-pk')
+    articles = Article.objects.all().order_by('-pk')
     
+    page = request.GET.get('page') #GET 방식으로 정보를 받아오는 데이터
+    paginator = Paginator(articles, '6') #Paginator(분할될 객체, 페이지 당 담길 객체수)
+    page_obj = paginator.get_page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
     context={    
-        'articles' : articles
+        'articles' : articles,
+        'page': page_obj
     }
     return render(request,'articles/index.html',context)
 

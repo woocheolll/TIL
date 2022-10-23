@@ -11,10 +11,47 @@
     <a href="{% url 'articles:create' %}">글 쓰기</a>
 {% endif %}
 
-{% for article in articles %}
+{% for article in page %}
 <h3><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></h3>
 <p>{{ article.updated_at }}</p>
 <hr>
 {% endfor %}
+<!-- ref(Disabled and active states) : https://getbootstrap.com/docs/5.2/components/pagination/ -->
+<!-- 페이징처리 시작 -->
+<nav aria-label="pagination" class="d-flex justify-content-center">
+  <ul class="pagination">
+    <!-- previous -->
+    {% if page.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page.previous_page_number }}">Previous</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    {% endif %}
 
+    <!-- pages -->
+    <!-- page.paginator.page_range : [1, ..., max] -->
+    {% for i in page.paginator.page_range %}
+      {% if i == page.number %}
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{ i }}</a></li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    
+    <!-- next -->
+    {% if page.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page.next_page_number }}">Next</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link">Next</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+<!-- 페이징처리 끝 -->
 {% endblock %}
