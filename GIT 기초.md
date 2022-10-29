@@ -14,7 +14,7 @@
 
 - modified : 파일이 수정된 상태
 - stagef: : 수정한 파일을 곧 커밋할 것이라고 표시한 상태
-- committed : 커밋이 된 상태
+- committed : 커밋이 된 상태.
 
 
 
